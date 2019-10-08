@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            class Student{
+                constructor(name,F_name,age)
+                {
+                    this.name=name;
+                    this.F_name=F_name;
+                    this.age=age;
+                }
+            }
+            class mgmtStudent extends Student
+            {
+                constructor(name,F_name,age,industryName)
+                {
+                    super(name,F_name,age)
+                    this.industryName=industryName;
+                }
+                get industry_name_get()
+                {
+                    return this.industryName
+                }
+                set industry_name_set(industryName)
+                {
+                    this.industryName=industryName
+                }
+            }
+            class csStudent extends Student
+            {
+                constructor(name,F_name,age,fypTitle)
+                {
+                    super(name,F_name,age)
+                    this.fypTitle=fypTitle;
+                }
+                set Set_fypTitle(fypTitle)
+                {
+                    this.fypTitle=fypTitle;
+                }
+                get display_fypTitle()
+                {
+                    return [this.name,this.F_name,this.age,this.fypTitle];
+                }
+            }
+            nouman=new csStudent("Nouman","M.Ejaz",22,"smartHutt")
+            fawad=new mgmtStudent("Fawad","Rasheed",22,"businees internship")
+            // console.log(fawad)
+            nouman.Set_fypTitle="BE-Wallet"
+            fawad.industry_name_set="HR "
+            console.log(nouman.display_fypTitle)
+            console.log(fawad.industry_name_get)
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
