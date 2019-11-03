@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arroww Function Assignment</title>
+	
+</head>
+<body>
+        <script type="text/javascript">
+                //with normal function
+                let students=
+                {
+                    print_student_name()
+                    {
+                        for (i of arguments)
+                            console.log(i)
+                    }
+                }
+                students.print_student_name("Nouman","Umer","khan")
+
+                // with arrow function
+                let students_arrow=
+                {
+                    print_std_name:()=>
+                    {
+                        for (i of arguments)
+                            console.log(i)
+                    }
+                }
+                students.print_student_name("Nouman","Umer","khan")
+
+                //with normal
+                let student=
+                {
+                    name:"Nouman",
+                    print:function()
+                    {
+                        return this.name;
+                    }
+                }
+                console.log(student.print())
+
+                // with arrow function
+                let student_arrow=
+                {
+                    name:"Nouman",
+                    print:()=>{
+                        return this.name;
+                        //  undefined
+                    }
+                }
+                console.log(student_arrow.print())
+
+                let numbers=
+                {
+                    numbers()
+                    {
+                        for(a of arguments) // arguments is builtin shows arguments passed to function
+                            console.log(a)
+                    }
+                }
+                numbers.numbers(1,2,3)
+
+                let numbers_arrow=
+                {
+                    numbers_arrow:()=>
+                    {
+                        for(b of arguments) // can't create arguments by itself
+                            console.log(b)
+                    }
+                }
+                function new_keyword_function(name,age)
+                {
+                    this.name=name;
+                    this.age=age;
+                }
+                new_person=new new_keyword_function("Ahsan",12)
+                console.log(new_person)
+                // console.log(new_keyword_function())
+
+                // NEW keywrd with ARROW FUNCTION
+                new_arrow_function:(name,age)=>
+                {
+                    this.name=name;
+                    this.age=age;
+                }
+                
+                // numbers_arrow.numbers_arrow(1,2,3) ERROR
+                // console.log(new_person)
+
+</script>
+</body>
+</html>
